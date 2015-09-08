@@ -1,7 +1,7 @@
 {
-  "name": "jaguarjs-jsdoc",
+  "name": "zoo-jsdoc",
   "version": "0.0.1",
-  "description": "Jaguar.js template for JSDoc 3",
+  "description": "Forked Jaguar.js template for JSDoc 3, for zoojs",
   "main": "Gruntfile.js",
   "dependencies": {
   },
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/davidshimjs/jaguarjs-jsdoc.git"
+    "url": "git@github.com:dickeylth/zoo-jsdoc.git"
   },
   "keywords": [
     "jsdoc",
@@ -29,10 +29,10 @@
     "jaguar.js",
     "template"
   ],
-  "author": "davidshimjs",
+  "author": "弘树",
   "license": "MIT",
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/davidshimjs/jaguarjs-jsdoc/issues"
+    "url": "https://github.com/dickeylth/zoo-jsdoc/issues"
   }
 }

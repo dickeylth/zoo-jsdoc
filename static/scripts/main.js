@@ -24,23 +24,23 @@ $(function () {
         $el.find('.list').scrollTop(0);
     });
 
-    // Toggle when click an item element
-    $('.navigation').on('click', '.title', function (e) {
-        $(this).parent().find('.itemMembers').toggle();
-    });
-
     // Show an item related a current documentation automatically
     var filename = $('.page-title').data('filename').replace(/\.[a-z]+$/, '');
-    var $currentItem = $('.navigation .item[data-name*="' + filename + '"]:eq(0)');
+    var $currentItem = $('.navigation .item[data-name="' + filename + '"]:eq(0)');
 
-    if ($currentItem.length) {
-        $currentItem
-            .remove()
-            .prependTo('.navigation .list')
-            .show()
-            .find('.itemMembers')
-                .show();
+    if (!$currentItem.length) {
+        $currentItem = $('.navigation .item[data-name*="' + '/' + filename + '"]:eq(0)');
     }
+    if (!$currentItem.length) {
+        $currentItem = $('.navigation .item[data-name="' + filename.replace(/_/g, '#') + '"]:eq(0)');
+    }
+
+    $currentItem
+      .remove()
+      .prependTo('.navigation .list')
+      .show('fast')
+      .find('.itemMembers')
+      .slideDown('fast');
 
     // Auto resizing on navigation
     var _onResize = function () {
